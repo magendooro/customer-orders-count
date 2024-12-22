@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- File: app/code/Vendor/CustomerOrdersCount/etc/di.xml -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <!-- Attach our plugin to the Customer Grid Collection -->
+    <type name="Magento\Customer\Model\ResourceModel\Grid\Collection">
+        <plugin 
+            name="magendoo_customer_orders_count_add_orders_count_column"
+            type="Magendoo\CustomerOrdersCount\Plugin\AddOrdersCountColumn" />
+    </type>
+
+</config>
